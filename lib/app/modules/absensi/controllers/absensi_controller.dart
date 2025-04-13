@@ -19,7 +19,7 @@ class AbsensiController extends GetxController {
     try {
       isLoading(true);
 
-      String token = "Bearer FP0MESeVpKJ0gVdSFHUhz6jNs1iFoGtb077m6jAo36a3c637";
+      String token = "Bearer fFO66K6TLxmeA66bfnTc8sPrssl9sBqp2YpqD09Lcf2c08ea";
 
       var response = await http.get(
         Uri.parse(BaseUrl.absensi),

@@ -5,6 +5,8 @@ import 'package:mobile_absensi/app/modules/dashboard/views/index_view.dart';
 import 'package:mobile_absensi/app/modules/dashboard/views/profile_view.dart';
 
 
+
+
 class DashboardController extends GetxController {
   //TODO: Implement DashboardController
 
