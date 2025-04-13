@@ -38,10 +38,10 @@ class DashboardView extends GetView<DashboardController> {
               icon: Icon(Icons.schedule),
               label: 'Absensi',
             ),
-            // BottomNavigationBarItem(
-            //   icon: Icon(Icons.date_range),
-            //   label: 'Pengajuan Cuti',
-            // ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.date_range),
+              label: 'Pengajuan Cuti',
+            ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: 'Profile',

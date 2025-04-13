@@ -8,6 +8,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/pengajuanCuti/bindings/pengajuan_cuti_binding.dart';
+import '../modules/pengajuanCuti/views/pengajuan_cuti_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 
@@ -35,14 +37,20 @@ class AppPages {
       binding: DashboardBinding(),
     ),
     GetPage(
-      name: _Paths.PROFILE,
-      page: () => const ProfileView(),
-      binding: ProfileBinding(),
-    ),
-    GetPage(
       name: _Paths.ABSENSI,
       page: () => const AbsensiView(),
       binding: AbsensiBinding(),
     ),
+    GetPage(
+      name: _Paths.PENGAJUAN_CUTI,
+      page: () => const PengajuanCutiView(),
+      binding: PengajuanCutiBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => const ProfileView(),
+      binding: ProfileBinding(),
+    ),
+    
   ];
 }

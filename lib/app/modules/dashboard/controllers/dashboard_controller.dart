@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mobile_absensi/app/modules/dashboard/views/absensi_view.dart';
 import 'package:mobile_absensi/app/modules/dashboard/views/index_view.dart';
+import 'package:mobile_absensi/app/modules/dashboard/views/pengajuan_cuti_view.dart';
 import 'package:mobile_absensi/app/modules/dashboard/views/profile_view.dart';
 
 
@@ -19,8 +20,8 @@ class DashboardController extends GetxController {
   final List<Widget> pages = [
     IndexView(),
     AbsensiView(),
+    PengajuanCutiView(),
     ProfileView(),
-
   ];
 
   @override

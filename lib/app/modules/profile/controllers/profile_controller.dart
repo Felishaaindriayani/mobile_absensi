@@ -20,7 +20,7 @@ class ProfileController extends GetxController {
       var response = await http.get(
         Uri.parse('http://192.168.43.187:8000/api/profile'),
         headers: {
-          'Authorization': 'Bearer fFO66K6TLxmeA66bfnTc8sPrssl9sBqp2YpqD09Lcf2c08ea', // Ganti token kamu di sini
+          'Authorization': 'Bearer TaO0gfGAxFAHCfColI5DICuHij3ua1R1wdPlOeat4ede5fab', // Ganti token kamu di sini
           'Accept': 'application/json',
         },
       );
