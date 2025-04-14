@@ -12,7 +12,7 @@ class LoginController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   final authToken = GetStorage();
-  
+
   @override
   void onInit() {
     super.onInit();
@@ -30,29 +30,27 @@ class LoginController extends GetxController {
     super.onClose();
   }
 
-void loginNow() async {
+  void loginNow() async {
+    print('mengirim request ke:  ${BaseUrl.login}');
     final response = await _getConnect.post(BaseUrl.login, {
-      'email': emailController.text, 
-      'password': passwordController
-          .text, 
+      'email': emailController.text,
+      'password': passwordController.text,
     });
 
+    print('response status: ${response.statusCode}');
+    print('response body ${response.body}');
+
     if (response.statusCode == 200) {
-      
-      authToken.write(
-          'token',
-          response.body[
-              'token']); 
-              Get.offAll(() => const DashboardView());
+      authToken.write('access_token', response.body['access_token']);
+      Get.offAll(() => const DashboardView());
     } else {
       Get.snackbar(
-        'Error', 
-        response.body['error']
-            .toString(), 
-        icon: const Icon(Icons.error), 
-        backgroundColor: Colors.red, 
-        colorText: Colors.white, 
-        forwardAnimationCurve: Curves.bounceIn, 
+        'Error',
+        response.body['error'].toString(),
+        icon: const Icon(Icons.error),
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
+        forwardAnimationCurve: Curves.bounceIn,
         margin: const EdgeInsets.only(
           top: 10,
           left: 5,
@@ -61,5 +59,4 @@ void loginNow() async {
       );
     }
   }
-
 }

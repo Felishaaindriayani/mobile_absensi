@@ -7,7 +7,6 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // PASTIKAN ini ada biar controller ter-*register*
     final ProfileController controller = Get.put(ProfileController());
 
     return Scaffold(
@@ -25,39 +24,67 @@ class ProfileView extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(16.0),
           child: Card(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            elevation: 5,
             child: Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(24.0),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: Icon(Icons.account_circle,
-                        size: 80, color: Colors.blueGrey),
+                    child: Column(
+                      children: const [
+                        Icon(Icons.account_circle,
+                            size: 80, color: Colors.blueGrey),
+                        SizedBox(height: 12),
+                        Text(
+                          'Data Profil',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(height: 16),
-                  Text("Nama: ${p.name ?? '-'}",
-                      style: TextStyle(fontSize: 18)),
-                  Text("Email: ${p.email ?? '-'}",
-                      style: TextStyle(fontSize: 16)),
-                  Text("NIP: ${p.nip ?? '-'}", style: TextStyle(fontSize: 16)),
-                  Text("Telepon: ${p.telepon ?? '-'}",
-                      style: TextStyle(fontSize: 16)),
-                  Text("Jenis Kelamin: ${p.jenisKelamin ?? '-'}",
-                      style: TextStyle(fontSize: 16)),
-                  Text(
-                      "Tempat, Tgl Lahir: ${p.tempatLahir ?? '-'}, ${p.tglLahir ?? '-'}",
-                      style: TextStyle(fontSize: 16)),
-                  Text("Alamat: ${p.alamat ?? '-'}",
-                      style: TextStyle(fontSize: 16)),
+                  const SizedBox(height: 24),
+                  _buildProfileItem("Nama", p.name),
+                  const SizedBox(height: 12),
+                  _buildProfileItem("Email", p.email),
+                  const SizedBox(height: 12),
+                  _buildProfileItem("NIP", p.nip),
                 ],
               ),
             ),
           ),
         );
       }),
+    );
+  }
+
+  Widget _buildProfileItem(String label, dynamic value) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "$label: ",
+          style: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+          ),
+        ),
+        Expanded(
+          child: Text(
+            value?.toString() ?? '-',
+            style: const TextStyle(
+              fontSize: 16,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

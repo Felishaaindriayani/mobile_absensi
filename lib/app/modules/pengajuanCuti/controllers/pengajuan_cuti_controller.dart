@@ -20,9 +20,9 @@ class PengajuanCutiController extends GetxController {
 
       final response = await http.get(
         Uri.parse(
-            'http://192.168.43.187:8000/api/pengajuancuti'), // Ganti dengan endpoint kamu
+            'http:///192.168.0.184:8000/api/pengajuancuti'), // Ganti dengan endpoint kamu
         headers: {
-          'Authorization': 'Bearer TaO0gfGAxFAHCfColI5DICuHij3ua1R1wdPlOeat4ede5fab', // Ganti dengan tokenmu
+          'Authorization': 'Bearer vt0bhPKrdUalnP3i2Bnugt55ux9RKoRLStIjoLgPa5d7fa8b', // Ganti dengan tokenmu
           'Accept': 'application/json',
         },
       );

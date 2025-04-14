@@ -18,9 +18,9 @@ class ProfileController extends GetxController {
     try {
       isLoading(true);
       var response = await http.get(
-        Uri.parse('http://192.168.43.187:8000/api/profile'),
+        Uri.parse('http:///192.168.0.184:8000/api/profile'),
         headers: {
-          'Authorization': 'Bearer TaO0gfGAxFAHCfColI5DICuHij3ua1R1wdPlOeat4ede5fab', // Ganti token kamu di sini
+          'Authorization': 'Bearer vt0bhPKrdUalnP3i2Bnugt55ux9RKoRLStIjoLgPa5d7fa8b', // Ganti token kamu di sini
           'Accept': 'application/json',
         },
       );
@@ -40,3 +40,5 @@ class ProfileController extends GetxController {
     }
   }
 }
+
+

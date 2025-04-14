@@ -4,7 +4,6 @@ import 'package:http/http.dart' as http;
 import 'package:mobile_absensi/app/data/absensi_response.dart';
 import 'package:mobile_absensi/app/utils/api.dart';
 
-
 class AbsensiController extends GetxController {
   var isLoading = true.obs;
   var absensiList = <Data>[].obs;
@@ -19,7 +18,7 @@ class AbsensiController extends GetxController {
     try {
       isLoading(true);
 
-      String token = "Bearer TaO0gfGAxFAHCfColI5DICuHij3ua1R1wdPlOeat4ede5fab";
+      String token = "Bearer dSzSxRlINGgun3IYwmBCXB5ZBdu0Yx5kytbEUDIv1a5002d8";
 
       var response = await http.get(
         Uri.parse(BaseUrl.absensi),
@@ -42,5 +41,4 @@ class AbsensiController extends GetxController {
       isLoading(false);
     }
   }
-
 }
