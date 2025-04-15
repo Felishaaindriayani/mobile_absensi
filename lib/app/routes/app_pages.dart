@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:mobile_absensi/app/modules/dashboard/views/pengajuan_cuti_view.dart';
 
 import '../modules/absensi/bindings/absensi_binding.dart';
 import '../modules/absensi/views/absensi_view.dart';
@@ -9,7 +10,6 @@ import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/pengajuanCuti/bindings/pengajuan_cuti_binding.dart';
-import '../modules/pengajuanCuti/views/pengajuan_cuti_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 
